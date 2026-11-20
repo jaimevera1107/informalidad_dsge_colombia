@@ -1,0 +1,9 @@
+% DRAFT: replaces the equal-technology accounting as the baseline.
+\paragraph{Informal technology.} Following \citet{IhrigMoe2004} and \citet{ElginOztunali2012}, all capital is formal: $Y_{f,t}=K_t^{\alpha}(X_tN_{f,t})^{1-\alpha}$ and $Y_{i,t}=A_i e^{z^r_t}X_tN_{i,t}^{\eta}$ with $0<\eta<1$. The justification is not that informal units use no capital, but what the household survey measures. The labor income reported by own-account workers and informal employers is mixed income or profit, and therefore already contains the return to the capital of their own unit; the wages they pay are counted in the income of their employees. Informal survey income is thus a measure of informal value added per worker. Formal survey wages, by contrast, measure only the labor share of formal value added, before the wedge. The informal output share is then
+\begin{equation}
+\theta_t=\frac{(1-\alpha)R_t\,s_t/(1-s_t)}{1+(1-\alpha)R_t\,s_t/(1-s_t)},
+\label{eq:share-labor-only}
+\end{equation}
+where $R_t$ is informal value added per worker relative to the gross formal wage. Informal employees of firms with six or more workers are the exception: they work with the firm's capital, so their value added is their wage divided by $1-\alpha$; the earnings series is built accordingly (Section~\ref{sec:data}). Under equal technologies the factor $1-\alpha$ disappears and \eqref{eq:share-labor-only} becomes the share of labor income, which is therefore an upper bound.
+
+\paragraph{Capital share.} The capital share of the formal sector is estimated rather than assumed. Capital is built by the perpetual-inventory method from gross fixed capital formation in constant prices, and $\ln(Y_f/N_f)=c+\alpha\ln(K/N_f)+gt+e$ is estimated by dynamic OLS \citep{StockWatson1993} on annual data for 1993--2025, with $Y_f$ computed from \eqref{eq:share-labor-only} so that $\alpha$ is a fixed point. {{ALPHA_RESULT}}

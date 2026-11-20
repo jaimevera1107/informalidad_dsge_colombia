@@ -1,0 +1,66 @@
+\section{The model in detail}
+\label{app:model}
+
+This appendix lists the equations exactly as they are solved and estimated. The code that implements them is in the ancillary files (\code{m2/model.py} and \code{m2/statespace.py}).
+
+\subsection{Stationary equilibrium conditions}
+
+Let $c_t=C_t/X_t$, $y_t=Y_t/X_t$, $y_{f,t}=Y_{f,t}/X_t$, $y_{i,t}=Y_{i,t}/X_t$, $i_t=I_t/X_t$, $g_t=G_t/X_t$, and $k_t=K_t/X_{t-1}$. Capital per unit of the current trend is $\tilde k_t = K_t/X_t = k_t\,e^{-(\gamma+\mu_t)}$. The thirteen equations, in the order of the code, are:
+\begin{align}
+&\text{(1) Output:} && y_t = y_{f,t} + y_{i,t},\quad y_{f,t}=\tilde k_t^{\alpha}N_{f,t}^{1-\alpha},\quad y_{i,t}=A_i e^{z^r_t}N_{i,t}^{\eta} \\
+&\text{(2) Formal labor:} && \psi_t\chi_fN_{f,t}^{\varphi}c_t = (1-\bar\tau)e^{-\omega_t}(1-\alpha)\,y_{f,t}/N_{f,t} \\
+&\text{(3) Informal labor:} && \psi_t\chi_iN_{i,t}^{\varphi}c_t = \eta\,y_{i,t}/N_{i,t} \\
+&\text{(4) Resources:} && y_t(1+\bar x + x_t) = c_t + i_t + g_t,\quad g_t=\bar g\,e^{z^g_t} \\
+&\text{(5) Capital:} && k_{t+1} = (1-\delta)\tilde k_t + \nu_t i_t \\
+&\text{(6) Euler:} && \frac{1}{\nu_tc_t} = \beta E_t\Big[\frac{e^{-(\gamma+\mu_{t+1})}}{c_{t+1}}\Big(\alpha\frac{y_{f,t+1}}{\tilde k_{t+1}} + \frac{1-\delta}{\nu_{t+1}}\Big)\Big] \\
+&\text{(7)--(13) Shocks:} && \zeta_{t+1}=\rho_\zeta\zeta_t+\sigma_\zeta\varepsilon_{\zeta,t+1},\quad \zeta\in\{\mu, z^g,\ln\nu,\ln\psi,\omega,x,z^r\}
+\end{align}
+The factor $e^{-(\gamma+\mu_{t+1})}$ in the Euler equation appears because $C_{t+1}=c_{t+1}X_{t+1}$ and $X_{t+1}=X_te^{\gamma+\mu_{t+1}}$: a positive trend shock raises future consumption and lowers its marginal utility. In equation (5), capital installed in $t$ is divided by $X_t$ and becomes $k_{t+1}$.
+
+\subsection{Steady state}
+
+At $\zeta_t=0$ for every shock and with the calibration of Table~\ref{tab:calibration}:
+\begin{align*}
+r &= e^{\gamma}/\beta-1+\delta, & \tilde k/y_f &= \alpha/r, & N_f &= \bar N(1-\bar s),\quad N_i=\bar N\bar s,\\
+y_f &= (\tilde k/y_f)^{\alpha/(1-\alpha)}N_f, & y &= y_f/(1-\theta), & y_i&=\theta y,\quad A_i = y_i/N_i^{\eta},\\
+k &= e^{\gamma}\tilde k, & i &= k-(1-\delta)\tilde k, & c &= (C/Y)\,y,\quad g=(G/Y)\,y,\\
+\bar x &= (c+i+g)/y-1, & \chi_f &= \frac{(1-\bar\tau)(1-\alpha)y_f/N_f}{N_f^{\varphi}c}, & \chi_i &= \frac{\eta\,y_i/N_i}{N_i^{\varphi}c}.
+\end{align*}
+The steady-state earnings ratio that enters the measurement equation is
+\[
+\bar R = \frac{y_i/N_i}{(1-\alpha)\,y_f/N_f} = \frac{\theta}{(1-\theta)(1-\alpha)}\cdot\frac{1-\bar s}{\bar s},
+\]
+which is Proposition~\ref{prop:share} inverted at the steady state. At the posterior median ($\theta=0.277$, $\alpha=0.354$, $\bar s=0.645$) it is 0.33.
+
+\subsection{Linearization and solution}
+
+Let $\bm{z}_t$ be the vector of the thirteen variables in logarithms (shocks in levels) and $\bar{\bm{z}}$ its steady state. Writing the system as $\bm{f}(\bm{z}_t, E_t\bm{z}_{t+1})=\bm{0}$, the first-order approximation is
+\[
+\bm{F}_1\,(\bm{z}_t-\bar{\bm{z}}) + \bm{F}_2\,E_t(\bm{z}_{t+1}-\bar{\bm{z}}) = \bm{0},
+\]
+where $\bm{F}_1$ and $\bm{F}_2$ are the Jacobians with respect to current and expected future values, computed by central finite differences. The generalized Schur (QZ) decomposition of the pencil $(-\bm{F}_1,\bm{F}_2)$ is ordered so that stable eigenvalues come first \citep{Klein2000}. With eight stable eigenvalues for eight states the solution is unique and takes the form \eqref{eq:solution}; otherwise the parameter draw is rejected. The solution is checked by verifying that $\bm{F}_1\bm{M} + \bm{F}_2\bm{M}\bm{T} = \bm{0}$, where $\bm{M}$ maps the states into all variables.
+
+\subsection{Measurement equations}
+
+Hats denote log deviations from the steady state and $q(t)$ the quarter of the year. The observables of the baseline are linked to the model as follows.
+\begin{align*}
+\Delta\ln Y^{\mathrm{obs}}_t - m^{Y}_{q(t)} &= \hat y_t - \hat y_{t-1} + \mu_t + u^Y_t,\\
+\Delta\ln C^{\mathrm{obs}}_t - m^{C}_{q(t)} &= \hat c_t - \hat c_{t-1} + \mu_t + u^C_t,\\
+\Delta\ln I^{\mathrm{obs}}_t - m^{I}_{q(t)} &= \hat\imath_t - \hat\imath_{t-1} + \mu_t + e^I_t - e^I_{t-1} + u^I_t,\\
+\Delta\ln G^{\mathrm{obs}}_t - m^{G}_{q(t)} &= z^g_t - z^g_{t-1} + \mu_t + u^G_t,\\
+\Delta\ln N^{\mathrm{obs}}_t - m^{N}_{q(t)} &= (1-\bar s)(\hat n_{f,t}-\hat n_{f,t-1}) + \bar s(\hat n_{i,t}-\hat n_{i,t-1}) + e^N_t - e^N_{t-1} + u^N_t,\\
+\logit s^{\mathrm{obs}}_t - \logit\bar s - \kappa_{q(t)} &= \hat n_{i,t} - \hat n_{f,t} + e^s_t,\\
+\ln R^{\mathrm{obs}}_t - \ln\bar R
+&= \ln(1+d_t^{\mathrm{nw}}) + b\,\mathbb{1}_{t\ge2022Q1}
+  + z^r_t + (\eta-1)\hat n_{i,t} \\
+&\quad - \alpha(\hat k_t - \mu_t - \hat n_{f,t}) + e^R_t .
+\end{align*}
+The trend shock $\mu_t$ appears in the growth rates because detrended variables are measured relative to $X_t$, whose growth is $\gamma+\mu_t$; the mean growth $\gamma$ is removed with the quarter-of-year means $m_q$. Total employment is linearized as a weighted average of the two types of work. The errors $e^I$, $e^N$ are level errors carried as states, $e^s$ and $e^R$ are independent errors of the two observables in levels, and $u$ is the small growth-rate error that keeps the covariance of the observables non-singular. $\kappa_q$ is the quarter-of-year pattern of the logit informality rate over 2005--2018, centered at zero. In the last equation, $\ln(1+d_t^{\mathrm{nw}})$ converts the wages reported in the survey into the employer's labor cost.
+
+\subsection{Likelihood and sampler}
+
+Stacking the states of \eqref{eq:solution}, their lags and the level errors in a vector $\bm{\xi}_t$, the model and the measurement equations form a linear Gaussian state-space system,
+\[
+\bm{\xi}_{t+1} = \bm{A}\bm{\xi}_t + \bm{B}\bm{\varepsilon}_{t+1},\qquad \bm{y}^{\mathrm{obs}}_t = \bm{Z}\bm{\xi}_t + \bm{u}_t .
+\]
+The Kalman filter computes, quarter by quarter, the forecast of the observables given the past, the forecast error $\bm{v}_t$ and its covariance $\bm{F}_t$, and the log likelihood is $-\tfrac12\sum_t\big(\ln|2\pi\bm{F}_t| + \bm{v}_t^{\top}\bm{F}_t^{-1}\bm{v}_t\big)$ over the observed entries. Quarters with missing observations use only the entries that are observed. The posterior is the likelihood times the prior; the random-walk Metropolis--Hastings sampler proposes a new parameter vector near the current one and accepts it with probability $\min\{1, p(\text{new})/p(\text{current})\}$, so that after a burn-in the accepted draws are a sample from the posterior. The Kalman smoother then recovers, for each draw, the path of the states given all the data, from which the informal share of output \eqref{eq:share} is computed.

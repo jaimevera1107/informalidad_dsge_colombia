@@ -1,0 +1,8 @@
+numpy>=2.0
+scipy>=1.12
+pandas>=2.2
+matplotlib>=3.8
+pyarrow>=15        # only for scripts/geih_ingresos_relativos.py (GEIH parquet)
+openpyxl>=3.1      # DANE national-accounts annex; comparar_referencias.py --banco-mundial
+requests>=2.31     # scripts/actualizar.py (DANE, Zenodo)
+pytest>=8

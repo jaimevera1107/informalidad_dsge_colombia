@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or these estimates, please cite them as below."
+title: "Measuring Colombia's Informal Output: Relative Earnings and Identification in a Bayesian Two-Sector Model, 1993-2026"
+type: software
+authors:
+  - family-names: Vera-Jaramillo
+    given-names: Jaime Andrés
+    orcid: "https://orcid.org/0000-0001-7611-6251"
+license: MIT
+repository-code: "https://github.com/jaimevera1107/informalidad_dsge_colombia"
+keywords:
+  - informal economy
+  - labor informality
+  - Bayesian DSGE
+  - Colombia
+date-released: "2026-11-20"
+version: "1.0.0"

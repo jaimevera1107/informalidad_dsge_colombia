@@ -1,0 +1,233 @@
+\begin{thebibliography}{33}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aguiar and Gopinath(2007)]{AguiarGopinath2007}
+Mark Aguiar and Gita Gopinath.
+\newblock Emerging market business cycles: The cycle is the trend.
+\newblock \emph{Journal of Political Economy}, 115\penalty0 (1):\penalty0
+  69--102, 2007.
+\newblock \doi{10.1086/511283}.
+
+\bibitem[An and Schorfheide(2007)]{AnSchorfheide2007}
+Sungbae An and Frank Schorfheide.
+\newblock {Bayesian} analysis of {DSGE} models.
+\newblock \emph{Econometric Reviews}, 26\penalty0 (2--4):\penalty0 113--172,
+  2007.
+\newblock \doi{10.1080/07474930701220071}.
+
+\bibitem[Arango et~al.(2006)Arango, Misas, and L{\'o}pez]{ArangoMisasLopez2006}
+Carlos~A. Arango, Martha~A. Misas, and Enrique L{\'o}pez.
+\newblock Econom{\'i}a subterr{\'a}nea en {Colombia} 1976--2003: una
+  medici{\'o}n a partir de la demanda de efectivo.
+\newblock \emph{Ensayos sobre Pol{\'i}tica Econ{\'o}mica}, 24\penalty0 (50),
+  2006.
+
+\bibitem[Asllani et~al.(2024)Asllani, Dell'Anno, and
+  Schneider]{AsllaniDellAnnoSchneider2024}
+Alban Asllani, Roberto Dell'Anno, and Friedrich Schneider.
+\newblock Long-run estimates of the global informal economies and new insights
+  for 152 countries over 1997 to 2022 using an enhanced {MIMIC} approach.
+\newblock IZA Discussion Paper 17557, IZA Institute of Labor Economics, 2024.
+
+\bibitem[Barrios et~al.(1993)Barrios, Henao, Posada, Valderrama, and
+  V{\'a}squez]{Barrios1993}
+Adriana Barrios, Mar{\'i}a~L. Henao, Carlos~E. Posada, F.~Valderrama, and
+  Diego~M. V{\'a}squez.
+\newblock Empleo y capital en {C}olombia: nuevas estimaciones (1950--1992).
+\newblock Archivos de macroeconom{\'i}a, Departamento Nacional de
+  Planeaci{\'o}n, 1993.
+
+\bibitem[Busato and Chiarini(2004)]{BusatoChiarini2004}
+Francesco Busato and Bruno Chiarini.
+\newblock Market and underground activities in a two-sector dynamic equilibrium
+  model.
+\newblock \emph{Economic Theory}, 23\penalty0 (4):\penalty0 831--861, 2004.
+
+\bibitem[Canova and Sala(2009)]{CanovaSala2009}
+Fabio Canova and Luca Sala.
+\newblock Back to square one: Identification issues in {DSGE} models.
+\newblock \emph{Journal of Monetary Economics}, 56\penalty0 (4):\penalty0
+  431--449, 2009.
+
+\bibitem[{DANE}(2025)]{DANE_IMIE}
+{DANE}.
+\newblock {\'I}ndice multidimensional de informalidad empresarial ({IMIE})
+  2024.
+\newblock Departamento Administrativo Nacional de Estad{\'i}stica, press
+  release, 2025.
+\newblock URL
+  \url{https://www.dane.gov.co/files/operaciones/IMIE/cp-IMIE-2024.pdf}.
+
+\bibitem[Denton(1971)]{Denton1971}
+Frank~T. Denton.
+\newblock Adjustment of monthly or quarterly series to annual totals: An
+  approach based on quadratic minimization.
+\newblock \emph{Journal of the American Statistical Association}, 66\penalty0
+  (333):\penalty0 99--102, 1971.
+\newblock \doi{10.1080/01621459.1971.10482227}.
+
+\bibitem[{Departamento Administrativo Nacional de Estad{\'i}stica
+  (DANE)}(2021)]{DANE_SIECI}
+{Departamento Administrativo Nacional de Estad{\'i}stica (DANE)}.
+\newblock Plan general del sistema de informaci{\'o}n para actividades
+  informales ({SIECI}).
+\newblock
+  \url{https://www.dane.gov.co/files/proyectos-de-resoluciones-y-decretos/p-2021-resolucion-SIECI/Plan_general_SIECI.pdf},
+  2021.
+
+\bibitem[Durbin and Koopman(2012)]{DurbinKoopman2012}
+James Durbin and Siem~Jan Koopman.
+\newblock \emph{Time Series Analysis by State Space Methods}.
+\newblock Oxford University Press, 2 edition, 2012.
+
+\bibitem[Elgin and {\"O}ztunal{\i}(2012)]{ElginOztunali2012}
+Ceyhun Elgin and O{\u{g}}uz {\"O}ztunal{\i}.
+\newblock Shadow economies around the world: Model based estimates.
+\newblock Working Paper~5, Bogazici University, Department of Economics, 2012.
+
+\bibitem[Elgin et~al.(2021)Elgin, Kose, Ohnsorge, and
+  Yu]{ElginKoseOhnsorgeYu2021}
+Ceyhun Elgin, M.~Ayhan Kose, Franziska Ohnsorge, and Shu Yu.
+\newblock Understanding informality.
+\newblock CEPR Discussion Paper 16497, Centre for Economic Policy Research,
+  2021.
+
+\bibitem[Fern{\'a}ndez and Meza(2015)]{FernandezMeza2015}
+Andr{\'e}s Fern{\'a}ndez and Felipe Meza.
+\newblock Informal employment and business cycles in emerging economies: The
+  case of {Mexico}.
+\newblock \emph{Review of Economic Dynamics}, 18\penalty0 (2):\penalty0
+  381--405, 2015.
+
+\bibitem[{GRECO}(1999)]{GRECO1999}
+{GRECO}.
+\newblock El crecimiento econ{\'o}mico colombiano en el siglo {XX}: aspectos
+  globales.
+\newblock Borradores de Econom{\'i}a 134, Banco de la Rep{\'u}blica, 1999.
+
+\bibitem[Ihrig and Moe(2004)]{IhrigMoe2004}
+Jane Ihrig and Karine~S. Moe.
+\newblock Lurking in the shadows: The informal sector and government policy.
+\newblock \emph{Journal of Development Economics}, 73\penalty0 (2):\penalty0
+  541--557, 2004.
+
+\bibitem[Iskrev(2010)]{Iskrev2010}
+Nikolay Iskrev.
+\newblock Local identification in {DSGE} models.
+\newblock \emph{Journal of Monetary Economics}, 57\penalty0 (2):\penalty0
+  189--202, 2010.
+
+\bibitem[Klein(2000)]{Klein2000}
+Paul Klein.
+\newblock Using the generalized {Schur} form to solve a multivariate linear
+  rational expectations model.
+\newblock \emph{Journal of Economic Dynamics and Control}, 24\penalty0
+  (10):\penalty0 1405--1423, 2000.
+\newblock \doi{10.1016/S0165-1889(99)00045-7}.
+
+\bibitem[Koop et~al.(2013)Koop, Pesaran, and Smith]{KoopPesaranSmith2013}
+Gary Koop, M.~Hashem Pesaran, and Ron~P. Smith.
+\newblock On identification of {Bayesian} {DSGE} models.
+\newblock \emph{Journal of Business \& Economic Statistics}, 31\penalty0
+  (3):\penalty0 300--314, 2013.
+
+\bibitem[Medina and Schneider(2018)]{MedinaSchneider2018}
+Leandro Medina and Friedrich Schneider.
+\newblock Shadow economies around the world: What did we learn over the last 20
+  years?
+\newblock IMF Working Paper 18/17, International Monetary Fund, 2018.
+
+\bibitem[Medina and Schneider(2019)]{MedinaSchneider2019}
+Leandro Medina and Friedrich Schneider.
+\newblock Shedding light on the shadow economy: A global database and the
+  interaction with the official one.
+\newblock CESifo Working Paper 7981, CESifo, 2019.
+
+\bibitem[Orsi et~al.(2014)Orsi, Raggi, and Turino]{OrsiRaggiTurino2014}
+Renzo Orsi, Davide Raggi, and Francesco Turino.
+\newblock Size, trend, and policy implications of the underground economy.
+\newblock \emph{Review of Economic Dynamics}, 17\penalty0 (3):\penalty0
+  417--436, 2014.
+\newblock \doi{10.1016/j.red.2013.11.001}.
+
+\bibitem[Restrepo-Echavarria(2014)]{RestrepoEchavarria2014}
+Paulina Restrepo-Echavarria.
+\newblock Macroeconomic volatility: The role of the informal economy.
+\newblock \emph{European Economic Review}, 70:\penalty0 454--469, 2014.
+
+\bibitem[Roberts et~al.(1997)Roberts, Gelman, and
+  Gilks]{RobertsGelmanGilks1997}
+Gareth~O. Roberts, Andrew Gelman, and Walter~R. Gilks.
+\newblock Weak convergence and optimal scaling of random walk {Metropolis}
+  algorithms.
+\newblock \emph{The Annals of Applied Probability}, 7\penalty0 (1):\penalty0
+  110--120, 1997.
+\newblock \doi{10.1214/aoap/1034625254}.
+
+\bibitem[Rodr{\'i}guez~Mu{\~n}oz et~al.(2004)Rodr{\'i}guez~Mu{\~n}oz,
+  Perilla~Jim{\'e}nez, and Reyes~Pe{\~n}a]{RodriguezPerillaReyes2004}
+Jorge~Iv{\'a}n Rodr{\'i}guez~Mu{\~n}oz, Juan~Ricardo Perilla~Jim{\'e}nez, and
+  Jos{\'e}~Daniel Reyes~Pe{\~n}a.
+\newblock C{\'a}lculo del {PIB} potencial en {C}olombia: 1970--2003.
+\newblock Archivos de Econom{\'i}a 261, Departamento Nacional de
+  Planeaci{\'o}n, 2004.
+
+\bibitem[Schneider and Enste(2000)]{SchneiderEnste2000}
+Friedrich Schneider and Dominik~H. Enste.
+\newblock Shadow economies: Size, causes, and consequences.
+\newblock \emph{Journal of Economic Literature}, 38\penalty0 (1):\penalty0
+  77--114, 2000.
+\newblock \doi{10.1257/jel.38.1.77}.
+
+\bibitem[Schneider et~al.(2010)Schneider, Buehn, and
+  Montenegro]{SchneiderBuehnMontenegro2010}
+Friedrich Schneider, Andreas Buehn, and Claudio~E. Montenegro.
+\newblock New estimates for the shadow economies all over the world.
+\newblock \emph{International Economic Journal}, 24\penalty0 (4):\penalty0
+  443--461, 2010.
+\newblock \doi{10.1080/10168737.2010.525974}.
+
+\bibitem[Solis-Garcia and Xie(2017)]{SolisGarciaXie2017}
+Mario Solis-Garcia and Yingtong Xie.
+\newblock Measuring the size of the shadow economy using a dynamic general
+  equilibrium model with trends.
+\newblock MPRA Paper 78968, Munich Personal RePEc Archive, 2017.
+\newblock URL \url{https://mpra.ub.uni-muenchen.de/78968/}.
+
+\bibitem[Stock and Watson(1993)]{StockWatson1993}
+James~H. Stock and Mark~W. Watson.
+\newblock A simple estimator of cointegrating vectors in higher order
+  integrated systems.
+\newblock \emph{Econometrica}, 61\penalty0 (4):\penalty0 783--820, 1993.
+
+\bibitem[Vehtari et~al.(2021)Vehtari, Gelman, Simpson, Carpenter, and
+  B{\"u}rkner]{Vehtari2021}
+Aki Vehtari, Andrew Gelman, Daniel Simpson, Bob Carpenter, and Paul-Christian
+  B{\"u}rkner.
+\newblock Rank-normalization, folding, and localization: An improved
+  $\widehat{R}$ for assessing convergence of {MCMC}.
+\newblock \emph{Bayesian Analysis}, 16\penalty0 (2):\penalty0 667--718, 2021.
+\newblock \doi{10.1214/20-BA1221}.
+
+\bibitem[Vera-Jaramillo(2025)]{VeraJaramillo2025ICML}
+Jaime~A. Vera-Jaramillo.
+\newblock Reconstructing subnational labor indicators in {Colombia}: An
+  integrated machine and deep learning approach.
+\newblock arXiv:2508.12514, 2025.
+
+\bibitem[Vera-Jaramillo(2026)]{VeraJaramillo2026Zenodo}
+Jaime~A. Vera-Jaramillo.
+\newblock Reconstructing subnational labor indicators in {Colombia}
+  (1993--2026): Datasets, release 2.6.1, 2026.
+
+\bibitem[Vuletin(2008)]{Vuletin2008}
+Guillermo Vuletin.
+\newblock Measuring the informal economy in {L}atin {A}merica and the
+  {C}aribbean.
+\newblock IMF Working Paper 08/102, International Monetary Fund, 2008.
+
+\end{thebibliography}

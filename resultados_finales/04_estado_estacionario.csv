@@ -1,0 +1,14 @@
+objeto,valor,descripcion
+theta,0.2622505491643536,Participacion informal en el PIB de estado estacionario
+R,0.3028385648371994,"Ingreso informal por trabajador / costo laboral formal, estado estacionario"
+productividad_relativa,0.1956337128848308,VA por trabajador informal / formal
+r_trimestral,0.03524930415348783,Tasa de renta del capital (trimestral)
+K_sobre_Yf_anual,2.5106878596706466,Capital / PIB formal (anios)
+K_sobre_Y_anual,1.8522585896917438,Capital / PIB total (anios)
+I_sobre_Y_modelo,0.14724392288726743,Inversion / PIB implicada por el modelo
+xbar,-0.016570222002011303,Residuo de no aditividad de volumenes encadenados
+tasa_informalidad_media,0.6450171098635274,Tasa de informalidad media (calibrada)
+alpha,0.354,Participacion del capital en el PIB formal (DOLS)
+delta_trimestral,0.0102,Depreciacion trimestral (4% anual)
+crecimiento_tendencia_trimestral,0.009627075236636687,Crecimiento medio trimestral de la tendencia
+yi_sobre_yf,0.355473730095364,"PIB informal / PIB formal, estado estacionario"

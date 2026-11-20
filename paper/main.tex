@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+
+% ----------------------------------
+% Language, encoding and fonts
+% ----------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+
+% ----------------------------------
+% Tables, figures, lists
+% ----------------------------------
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{float}
+\usepackage[labelfont=bf]{caption}
+\usepackage{enumitem}
+\setlist{itemsep=0.5ex, topsep=0.5ex, parsep=0.5ex}
+\usepackage{xcolor}
+\definecolor{sectionblue}{RGB}{0,76,153}
+\usepackage{sectsty}
+\sectionfont{\color{sectionblue}\large\bfseries\sffamily}
+\subsectionfont{\color{sectionblue}\normalsize\bfseries\sffamily}
+\subsubsectionfont{\color{sectionblue}\normalsize\sffamily}
+
+% ----------------------------------
+% Mathematics
+% ----------------------------------
+\usepackage{amsmath, amssymb, amsthm, bm}
+\DeclareMathOperator{\logit}{logit}
+\newtheorem{proposition}{Proposition}
+\newcommand{\code}[1]{\texttt{\small #1}}
+% Expandable input, safe before \bottomrule inside tabular environments.
+\makeatletter\newcommand{\tableinput}[1]{\@@input #1 }\makeatother
+
+% ----------------------------------
+% Citations and links
+% ----------------------------------
+\usepackage[authoryear,round]{natbib}
+\usepackage[colorlinks, citecolor=blue, urlcolor=blue, linkcolor=blue, bookmarks=true]{hyperref}
+
+% Structure note. Motivation and literature, data, model, estimation,
+% identification, results, limitations, conclusions. Identification comes before
+% the results because it explains why the relative-earnings observable, and not
+% the aggregates, determines the level of the informal share.
+
+\title{Measuring Colombia's Informal Output:\\
+Relative Earnings and Identification in a Bayesian Two-Sector Model, 1993--2026}
+
+\author{
+  Jaime A. Vera-Jaramillo\thanks{Email: \href{mailto:jaimevera1107@gmail.com}{jaimevera1107@gmail.com},
+  \href{mailto:ja.veraj@uniandes.edu.co}{ja.veraj@uniandes.edu.co};
+  ORCID: \href{https://orcid.org/0000-0001-7611-6251}{0000-0001-7611-6251}}
+}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\input{sections/00_abstract}
+\input{sections/01_introduction}
+\input{sections/02_background}
+\input{sections/03_data}
+\input{sections/04_model}
+\input{sections/05_estimation}
+\input{sections/06_identification}
+\input{sections/07_results}
+\input{sections/08_discussion}
+\input{sections/08_limitations}
+\input{sections/09_conclusions}
+
+\input{sections/10_statements}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\input{sections/11_appendix}
+
+\end{document}

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+dist/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.blg
+datos/geih/*_mensual*.csv
+datos/descargas/
+datos/versiones/
+datos/greco/*.pdf
+.pytest_cache/
