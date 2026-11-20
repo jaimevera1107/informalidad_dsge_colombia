@@ -25,7 +25,7 @@ Todo lo de esta carpeta se regenera con `python scripts\resultados_finales.py`.
 | `11_identificacion_perfil.csv` | Perfil de verosimilitud de θ de estado estacionario, con y sin ingresos |
 | `12_identificacion_simulacion.csv` | Recuperación de un θ conocido en datos simulados |
 | `13_identificacion_trayectorias_theta_fijo.csv` | Trayectoria de la participación con θ de estado estacionario fijo en 0,10–0,40 |
-| `figuras/` | Figuras del artículo (PDF) |
+| `figuras/` | `fig_participacion_informal`, `fig_estimated_series` y `fig_shocks` (PDF y PNG) se regeneran en cada actualización; las demás son las figuras del artículo (datos hasta 2026T2) |
 
 ## Diccionario de `01_series_trimestrales.csv`
 

@@ -6,13 +6,15 @@
 
 Este repositorio estima qué parte del PIB de Colombia produce el trabajo informal, trimestre a trimestre, de 1993 a 2026. Usa un modelo de equilibrio general dinámico estándar de dos sectores, estimado con métodos bayesianos.
 
-El nivel se identifica con una serie nueva de ingresos de trabajadores informales frente a formales, construida con los microdatos de la Gran Encuesta Integrada de Hogares (GEIH). Contiene el código, los datos, todas las estimaciones y el artículo (en inglés).
+El nivel se identifica con una serie nueva de ingresos de trabajadores informales frente a formales, construida con los microdatos de la Gran Encuesta Integrada de Hogares (GEIH). Contiene el código, los datos y todas las estimaciones. El artículo (en inglés) está en arXiv.
 
 **Autor:** Jaime A. Vera-Jaramillo · [ORCID 0000-0001-7611-6251](https://orcid.org/0000-0001-7611-6251)
 
 ---
 
 ## Resultados principales
+
+![Participación informal en el PIB y tasa de informalidad laboral](resultados_finales/figuras/fig_participacion_informal.png)
 
 | Año | Participación informal en el PIB | Intervalo 90% | PIB informal (billones de pesos de 2015) | Informalidad laboral | VA por trabajador informal / formal |
 |---|---|---|---|---|---|
@@ -29,6 +31,8 @@ El nivel se identifica con una serie nueva de ingresos de trabajadores informale
 - **Por qué 55% de los trabajadores produce 20% del PIB.** El valor agregado por trabajador informal es cerca de una quinta parte del de un trabajador formal. Con la misma brecha, una informalidad laboral de 30% equivaldría a cerca de 9% del PIB.
 - **Comparación con la literatura.** La estimación está dentro del rango de las estimaciones publicadas para Colombia (Schneider y coautores, Medina y Schneider, Asllani et al., Banco Mundial y Vuletin), que difieren entre sí hasta en 19 puntos.
 - **Identificación.** Lo que los datos identifican es la trayectoria de la participación, no el parámetro de largo plazo del modelo. La trayectoria cambia menos de 0,3 puntos desde 2007 cuando ese parámetro se fija en cualquier valor entre 10% y 40%.
+
+![Valor agregado, productividad y empleo por sector](resultados_finales/figuras/fig_estimated_series.png)
 
 > **Tres medidas distintas.** La informalidad *laboral* cuenta personas (54% de los ocupados). La informalidad *empresarial* del DANE cuenta micronegocios (90% en 2024). Este proyecto estima una tercera cosa: la proporción del *producto* que sale del trabajo informal.
 
@@ -69,7 +73,6 @@ Todo está en [`resultados_finales/`](resultados_finales/), con su diccionario d
 | `scripts/` | Puntos de entrada en línea de comandos (ver el flujo) |
 | `datos/` | Insumos: base trimestral, ingresos GEIH, costos laborales legales, referencias publicadas, tablas GRECO y series anuales 1905–2025 |
 | `resultados_m2/` | Salidas completas de cada estimación (una carpeta por especificación) |
-| `paper/` | Fuente LaTeX del artículo, figuras y tablas |
 | `docs/` | Comandos de las especificaciones alternativas (`SENSIBILIDADES.md`); `docs/historial/` guarda notas de trabajo |
 | `.github/workflows/` | Pruebas en cada cambio y actualización trimestral automática |
 | `tests/` | Pruebas automáticas |
@@ -182,12 +185,12 @@ Todos los comandos se corren desde la raíz del repositorio.
    ```powershell
    python scripts\resultados_finales.py --draws 400
    ```
-10. **Tablas, figuras y paquete de arXiv:**
+10. **Tablas y figuras del artículo** (escriben en `paper/tables` y `paper/figures`; la fuente LaTeX no está en este repositorio):
     ```powershell
     python scripts\tablas_paper.py --base resultados_m2\solo_trabajo_cuna_legal --out paper
     python scripts\tabla_sensibilidad.py --results resultados_m2 --out paper
     python scripts\figuras_paper.py --results resultados_m2 --out paper
-    python scripts\preparar_arxiv.py
+    python scripts\series_paper.py --results resultados_finales --out paper
     ```
 
 **Otros scripts:**
@@ -224,7 +227,7 @@ Las condiciones de primer orden, el estado estacionario, la solución y las ecua
 
 ## Artículo
 
-*Measuring Colombia's Informal Output: Relative Earnings and Identification in a Bayesian Two-Sector Model, 1993–2026.* La fuente está en `paper/`; el PDF se compila con `latexmk -pdf main.tex` dentro de esa carpeta.
+*Measuring Colombia's Informal Output: Relative Earnings and Identification in a Bayesian Two-Sector Model, 1993–2026.* Disponible en arXiv (enlace pendiente). Las figuras de `resultados_finales/figuras/` se regeneran en cada actualización trimestral; las del artículo corresponden a los datos hasta 2026T2.
 
 ## Cómo citar
 
@@ -235,5 +238,5 @@ GitHub muestra la cita en formato APA y BibTeX con el botón *Cite this reposito
 ## Licencia
 
 - **Código** (`m2/`, `scripts/`, `tests/`): [MIT](LICENSE).
-- **Datos construidos, resultados y artículo** (`datos/`, `resultados_m2/`, `resultados_finales/`, `paper/`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Se pueden usar y adaptar citando la fuente.
+- **Datos construidos y resultados** (`datos/`, `resultados_m2/`, `resultados_finales/`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Se pueden usar y adaptar citando la fuente.
 - **Fuentes de terceros:** las cifras del DANE, el Banco de la República (GRECO) y las estimaciones publicadas conservan los términos de sus autores; aquí solo se incluyen series derivadas, con su referencia. Los documentos GRECO no se redistribuyen: `scripts\extraer_greco.py` los descarga del Banco de la República.

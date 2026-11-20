@@ -13,3 +13,5 @@ datos/descargas/
 datos/versiones/
 datos/greco/*.pdf
 .pytest_cache/
+paper/
+dist/

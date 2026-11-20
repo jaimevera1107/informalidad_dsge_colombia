@@ -1,0 +1,36 @@
+{
+  "started": "2026-11-20T20:11:13.115012+00:00",
+  "sources": {
+    "cuentas_nacionales": {
+      "url": "https://www.dane.gov.co/files/operaciones/PIB/anex-GastoConstantes-IIItrim2026.xlsx",
+      "file": "anex-GastoConstantes-IIItrim2026.xlsx",
+      "last_quarter": "2026Q3"
+    },
+    "icml": {
+      "record": 24357243,
+      "version": "2.6.1.",
+      "doi": "10.5281/zenodo.24357243",
+      "file": "icml_colombia_v2.6.1_data.zip",
+      "last_month": "2026-08"
+    },
+    "geih_extension": {
+      "months": [
+        "2026-09"
+      ],
+      "overlap": [
+        "2026-06",
+        "2026-07",
+        "2026-08"
+      ],
+      "rate_adjustment": -0.002052151038760145
+    }
+  },
+  "notes": [
+    "Dataset: 1993Q1-2026Q3 (previous 2026Q2); changed"
+  ],
+  "last_quarter": "2026Q3",
+  "new_quarters": [
+    "2026Q3"
+  ],
+  "changed": true
+}

@@ -220,8 +220,17 @@ class FinalTables:
                 print(f"no encontrado (se omite): {src}")
         figures = self.out / "figuras"
         figures.mkdir(exist_ok=True)
+        # Figures of the estimation results, if the paper sources are present (they are not
+        # part of the public repository); the figures of the estimated series are always
+        # regenerated from the files just written, so they follow each quarterly update.
         for fig in (ROOT / "paper" / "figures").glob("*.pdf"):
-            shutil.copy2(fig, figures / fig.name)
+            if fig.stem not in ("fig_estimated_series", "fig_shocks"):
+                shutil.copy2(fig, figures / fig.name)
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from series_paper import EstimatedSeries
+        series = EstimatedSeries(self.out, figures, formats=("pdf", "png"))
+        for build in (series.share_figure, series.series_figure, series.shocks_figure):
+            build()
 
     def sensitivity(self) -> None:
         sys.path.insert(0, str(ROOT / "scripts"))
